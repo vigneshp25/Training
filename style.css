@@ -1,1 +1,54 @@
-/*test*/
+body {
+  display: flex;
+  height: 100vh;
+  background-image: url(assets/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+}
+body #loginPage, body #registrationPage {
+  display: flex;
+  width: 50%;
+  background-color: rgba(240, 240, 240, 0.8);
+  margin: 5% 10%;
+  position: relative;
+  box-shadow: 35px -30px rgba(218, 226, 67, 0.2);
+}
+body #loginPage::after, body #registrationPage::after {
+  content: "";
+  background-color: rgba(215, 165, 114, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 7%;
+  left: 10%;
+  z-index: -1;
+}
+body #loginPage .formClass, body #registrationPage .formClass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20%;
+}
+body #loginPage .formClass label, body #registrationPage .formClass label {
+  display: block;
+  width: 100%;
+}
+body #loginPage .formClass input, body #registrationPage .formClass input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid rgba(215, 165, 114, 0.9);
+  background-color: rgba(255, 255, 255, 0.6666666667);
+}
+body #loginPage .formClass input[type=button], body #registrationPage .formClass input[type=button] {
+  margin-top: 20px;
+}
+body #loginPage .formClass input[type=button]:hover, body #registrationPage .formClass input[type=button]:hover {
+  background-color: rgba(215, 165, 114, 0.9);
+}

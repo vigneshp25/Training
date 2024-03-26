@@ -1,1 +1,1 @@
-console.log("test");
+var loginPageUsername = document.getElementById("login-username");

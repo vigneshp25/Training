@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vignesh App</title>
     <link rel="stylesheet" href="https://unpkg.com/scss-reset/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="loginPage" class="whiteShadowBackground" style="display: none;">
+    <div id="loginPage" class="whiteShadowBackground displayNone">
         <form action="" class="loginform formClass">
             <label for="login-username">User Name</label>
             <input type="text" id="login-username" placeholder="Enter User Name">
             <label for="login-password">Password</label>
             <input type="password" id="login-password" placeholder="Enter Password">
             <p id="loginErrorMessage" class="warning-message"></p>
-            <input type="button" value="Login" onclick="loginValidation()">
+            <input type="button" value="Login">
             <p>Don't have an account? <a href="javascript:void(0)" onclick="goToRegistration()">Register here</a></p>
         </form>
     </div>
@@ -28,20 +28,21 @@
             <input type="text" id="registration-username" placeholder="Enter User Name">
             <p id="registration-username-alert" class="warning-message"></p>
             <label for="registration-password">Password</label>
-            <input type="text" id="registration-password" placeholder="Enter Password">
+            <input type="password" id="registration-password" placeholder="Enter Password">
             <p id="registration-password-alert" class="warning-message"></p>
             <label for="registration-email">Email ID</label>
             <input type="text" id="registration-email" placeholder="Enter Email">
             <p id="registration-email-alert" class="warning-message"></p>
-            <input type="button" value="Register" onclick="UserRegistration()">
+            <input type="button" value="Register">
             <p>Already have an account? <a href="javascript:void(0)" onclick="goToLogin()">Login here</a></p>
         </form>
     </div>
-    <div id="userLandingPage">
+    <div id="userLandingPage" class="displayNone">
         <header id="header"></header>
         <main id="main"></main>
         <footer id="footer"></footer>
     </div>
-    <div id="logoutPage"></div>
+    <div id="logoutPage" class="displayNone"></div>
+    <script src="script.js"></script>
 </body>
 </html>

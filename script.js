@@ -12,14 +12,10 @@ var registrationPageUsernameErrorAlert = document.getElementById("registration-u
 var registrationPagePasswordErrorAlert = document.getElementById("registration-password-alert");
 var registrationPageEmailErrorAlert = document.getElementById("registration-email-alert");
 var goToRegistration = function () {
-    if (loginPage != null && registrationPage != null) {
-        loginPage.classList.add("displayNone");
-        registrationPage.classList.remove("displayNone");
-    }
+    loginPage === null || loginPage === void 0 ? void 0 : loginPage.classList.add("displayNone");
+    registrationPage === null || registrationPage === void 0 ? void 0 : registrationPage.classList.remove("displayNone");
 };
 var goToLogin = function () {
-    if (loginPage != null && registrationPage != null) {
-        registrationPage.classList.add("displayNone");
-        loginPage.classList.remove("displayNone");
-    }
+    registrationPage === null || registrationPage === void 0 ? void 0 : registrationPage.classList.add("displayNone");
+    loginPage === null || loginPage === void 0 ? void 0 : loginPage.classList.remove("displayNone");
 };

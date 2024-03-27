@@ -15,14 +15,10 @@ const registrationPagePasswordErrorAlert = document.getElementById("registration
 const registrationPageEmailErrorAlert = document.getElementById("registration-email-alert");
 
 let goToRegistration = ()=>{
-    if(loginPage != null && registrationPage != null){
-        loginPage.classList.add("displayNone");
-        registrationPage.classList.remove("displayNone");
-    }
+    loginPage?.classList.add("displayNone");
+    registrationPage?.classList.remove("displayNone");
 }
 let goToLogin = ()=>{
-    if(loginPage != null && registrationPage != null){
-        registrationPage.classList.add("displayNone");
-        loginPage.classList.remove("displayNone");
-    }
+    registrationPage?.classList.add("displayNone");
+    loginPage?.classList.remove("displayNone");
 }

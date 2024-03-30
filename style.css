@@ -87,19 +87,32 @@ body #userLandingPage #header #navigation ul {
 }
 body #userLandingPage #header #navigation ul li {
   list-style: none;
+  border: 1px solid transparent;
+}
+body #userLandingPage #header #navigation ul li a {
+  display: block;
   padding: 5px 10px;
+  text-decoration: none;
+  color: #03A753;
+}
+body #userLandingPage #header #navigation ul li:hover {
+  border: 1px solid #FAAF29;
 }
 body #userLandingPage #header #logoutButton {
   display: flex;
   text-align: center;
   padding: 5px 15px;
-  border: 1px solid rgba(215, 165, 114, 0.9);
+  border: 1px solid #FAAF29;
+  color: #03A753;
+  line-height: normal;
 }
 body #userLandingPage #header #logoutButton:hover {
-  background-color: rgba(215, 165, 114, 0.9);
+  background-color: #03A753;
+  color: #fff;
 }
 body #userLandingPage #main {
   min-height: calc(100vh - 200px);
+  background-color: rgba(215, 165, 114, 0.9);
 }
 body #userLandingPage #footer {
   height: 100px;

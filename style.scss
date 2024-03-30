@@ -82,7 +82,16 @@ body{
                     display: flex;
                     li{
                         list-style: none;
-                        padding: 5px 10px;
+                        border: 1px solid transparent;
+                        a{
+                            display: block;
+                            padding: 5px 10px;
+                            text-decoration: none;
+                            color: #03A753;
+                        }
+                        &:hover{
+                            border: 1px solid #FAAF29;
+                        }
                     }
                 }
             }
@@ -90,14 +99,18 @@ body{
                 display: flex;
                 text-align: center;
                 padding: 5px 15px;
-                border: 1px solid rgba(215,165,114,0.9);
+                border: 1px solid #FAAF29;
+                color: #03A753;
+                line-height: normal;
                 &:hover{
-                    background-color: rgba(215,165,114,0.9);
+                    background-color: #03A753;
+                    color: #fff;
                 }
             }
         }
         #main{
             min-height: calc(100vh - 200px);
+            background-color: rgba(215,165,114,0.9);;
         }
         #footer{
             height: 100px;

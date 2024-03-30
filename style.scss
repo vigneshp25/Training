@@ -52,6 +52,42 @@ body{
             }
         }
     }
+    #userLandingPage{
+        width: 100%;
+        #header{
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #fff;
+            #logo{
+                display: flex;
+                align-items: center;
+                background-image: url(assets/logo.png);
+                height: 80px;
+            }
+            #navigation{
+                display: flex;
+                ul{
+                    padding-left: 50px;
+                    display: flex;
+                    li{
+                        list-style: none;
+                        padding: 5px 10px;
+                    }
+                }
+            }
+            #logoutButton{
+                display: flex;
+                text-align: center;
+                padding: 5px 15px;
+                border: 1px solid rgba(215,165,114,0.9);
+                &:hover{
+                    background-color: rgba(215,165,114,0.9);
+                }
+            }
+        }
+    }
 }
 .displayNone{
     display: none !important;

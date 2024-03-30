@@ -53,6 +53,42 @@ body #loginPage .formClass input[type=button], body #registrationPage .formClass
 body #loginPage .formClass input[type=button]:hover, body #registrationPage .formClass input[type=button]:hover {
   background-color: rgba(215, 165, 114, 0.9);
 }
+body #userLandingPage {
+  width: 100%;
+}
+body #userLandingPage #header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+}
+body #userLandingPage #header #logo {
+  display: flex;
+  align-items: center;
+  background-image: url(assets/logo.png);
+  height: 80px;
+}
+body #userLandingPage #header #navigation {
+  display: flex;
+}
+body #userLandingPage #header #navigation ul {
+  padding-left: 50px;
+  display: flex;
+}
+body #userLandingPage #header #navigation ul li {
+  list-style: none;
+  padding: 5px 10px;
+}
+body #userLandingPage #header #logoutButton {
+  display: flex;
+  text-align: center;
+  padding: 5px 15px;
+  border: 1px solid rgba(215, 165, 114, 0.9);
+}
+body #userLandingPage #header #logoutButton:hover {
+  background-color: rgba(215, 165, 114, 0.9);
+}
 
 .displayNone {
   display: none !important;

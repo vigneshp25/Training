@@ -22,7 +22,7 @@
             <p>Don't have an account? <a href="javascript:void(0)" onclick="goToRegistration()">Register here</a></p>
         </form>
     </div>
-    <div id="registrationPage" class="whiteShadowBackground">
+    <div id="registrationPage" class="whiteShadowBackground displayNone">
         <form class="registrationform formClass">
             <label for="registration-username">User Name</label>
             <input type="text" id="registration-username" placeholder="Enter User Name">
@@ -37,12 +37,29 @@
             <p>Already have an account? <a href="javascript:void(0)" onclick="goToLogin()">Login here</a></p>
         </form>
     </div>
-    <div id="userLandingPage" class="displayNone">
-        <header id="header"></header>
+    <div id="userLandingPage">
+        <header id="header">
+            <div id="logo"></div>
+            <nav id="navigation">
+                <ul>
+                    <li>Home</li>
+                    <li>Products</li>
+                    <li>Joke</li>
+                    <li>Thirukural</li>
+                </ul>
+            </nav>
+            <button id="logoutButton">Logout</button>
+        </header>
         <main id="main"></main>
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <p class="footerMessage">Copyright © 2024 All Rights Reserved</p>
+        </footer>
     </div>
-    <div id="logoutPage" class="displayNone"></div>
+    <div id="logoutPage" class="displayNone">
+        <div id="logoutSection">
+            <h3 id="logoutMessage">You have been sucessfully logged out</h3>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@
             <p>Don't have an account? <a href="javascript:void(0)" onclick="goToRegistration()">Register here</a></p>
         </form>
     </div>
-    <div id="registrationPage" class="whiteShadowBackground displayNone">
+    <div id="registrationPage" class="whiteShadowBackground">
         <form class="registrationform formClass">
             <label for="registration-username">User Name</label>
             <input type="text" id="registration-username" placeholder="Enter User Name">
@@ -33,7 +33,7 @@
             <label for="registration-email">Email ID</label>
             <input type="text" id="registration-email" placeholder="Enter Email">
             <p id="registration-email-alert" class="warning-message"></p>
-            <input type="button" value="Register">
+            <input type="button" value="Register" onclick="registerUser()">
             <p>Already have an account? <a href="javascript:void(0)" onclick="goToLogin()">Login here</a></p>
         </form>
     </div>

@@ -1,18 +1,19 @@
-const loginPage = document.getElementById("loginPage");
-const registrationPage = document.getElementById("registrationPage");
-const userLandingPage = document.getElementById("userLandingPage");
-const logoutPage = document.getElementById("logoutPage");
+const loginPage: HTMLElement | null = document.getElementById("loginPage");
+const registrationPage: HTMLElement | null = document.getElementById("registrationPage");
+const userLandingPage: HTMLElement | null = document.getElementById("userLandingPage");
+const logoutPage: HTMLElement | null = document.getElementById("logoutPage");
 
-const loginPageUsername = document.getElementById("login-username");
-const loginPagePassword = document.getElementById("login-password");
-const loginPageErrorMessage = document.getElementById("loginErrorMessage")
+const loginPageUsername: HTMLElement | null = document.getElementById("login-username");
+const loginPagePassword: HTMLElement | null = document.getElementById("login-password");
+const loginPageErrorMessage: HTMLElement | null = document.getElementById("loginErrorMessage")
 
-const registrationPageUsername = document.getElementById("registration-username");
-const registrationPagePassword = document.getElementById("registration-password");
-const registrationPageEmail = document.getElementById("registration-email");
-const registrationPageUsernameErrorAlert = document.getElementById("registration-username-alert");
-const registrationPagePasswordErrorAlert = document.getElementById("registration-password-alert");
-const registrationPageEmailErrorAlert = document.getElementById("registration-email-alert");
+const registrationPageUsername: HTMLElement | null = document.getElementById("registration-username");
+const registrationPagePassword: HTMLElement | null = document.getElementById("registration-password");
+const registrationPageEmail: HTMLElement | null = document.getElementById("registration-email");
+const registrationPageUsernameErrorAlert: HTMLElement | null = document.getElementById("registration-username-alert");
+const registrationPagePasswordErrorAlert: HTMLElement | null = document.getElementById("registration-password-alert");
+const registrationPageEmailErrorAlert: HTMLElement | null = document.getElementById("registration-email-alert");
+const user:string = "vignesh";
 
 let goToRegistration = ()=>{
     loginPage?.classList.add("displayNone");

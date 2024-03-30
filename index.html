@@ -39,26 +39,30 @@
     </div>
     <div id="userLandingPage">
         <header id="header">
-            <div id="logo"></div>
+            <div id="logo">
+                <img src="assets/logo.png" alt="logo">
+            </div>
             <nav id="navigation">
                 <ul>
-                    <li>Home</li>
-                    <li>Products</li>
-                    <li>Joke</li>
-                    <li>Thirukural</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Joke</a></li>
+                    <li><a href="#">Thirukural</a></li>
                 </ul>
             </nav>
             <button id="logoutButton">Logout</button>
         </header>
-        <main id="main"></main>
+        <main id="main">
+            <section class="welcomeMessage"></section>
+        </main>
         <footer id="footer">
             <p class="footerMessage">Copyright © 2024 All Rights Reserved</p>
         </footer>
     </div>
     <div id="logoutPage" class="displayNone">
-        <div id="logoutSection">
+        <section id="logoutSection">
             <h3 id="logoutMessage">You have been sucessfully logged out</h3>
-        </div>
+        </section>
     </div>
     <script src="script.js"></script>
 </body>

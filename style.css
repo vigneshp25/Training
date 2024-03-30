@@ -66,8 +66,17 @@ body #userLandingPage #header {
 body #userLandingPage #header #logo {
   display: flex;
   align-items: center;
-  background-image: url(assets/logo.png);
-  height: 80px;
+}
+body #userLandingPage #header #logo img {
+  width: auto;
+  height: 100px;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  animation: rotate 3s linear infinite;
+}
+body #userLandingPage #header #logo img:hover {
+  animation-play-state: paused; /* Pause the animation on hover */
+  transform: rotateY(0deg);
 }
 body #userLandingPage #header #navigation {
   display: flex;
@@ -89,7 +98,26 @@ body #userLandingPage #header #logoutButton {
 body #userLandingPage #header #logoutButton:hover {
   background-color: rgba(215, 165, 114, 0.9);
 }
+body #userLandingPage #main {
+  min-height: calc(100vh - 200px);
+}
+body #userLandingPage #footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+}
 
 .displayNone {
   display: none !important;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }

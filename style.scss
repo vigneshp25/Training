@@ -63,8 +63,17 @@ body{
             #logo{
                 display: flex;
                 align-items: center;
-                background-image: url(assets/logo.png);
-                height: 80px;
+                img {
+                    width: auto;
+                    height: 100px;
+                    transition: transform 0.5s; 
+                    transform-style: preserve-3d;
+                    animation: rotate 3s linear infinite;
+                    &:hover{
+                        animation-play-state: paused; /* Pause the animation on hover */
+                        transform: rotateY(0deg);
+                    }
+                }
             }
             #navigation{
                 display: flex;
@@ -87,8 +96,26 @@ body{
                 }
             }
         }
+        #main{
+            min-height: calc(100vh - 200px);
+        }
+        #footer{
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #fff;
+        }
     }
 }
 .displayNone{
     display: none !important;
+}
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
 }

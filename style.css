@@ -113,6 +113,13 @@ body #userLandingPage #header #logoutButton:hover {
 body #userLandingPage #main {
   min-height: calc(100vh - 200px);
   background-color: rgba(215, 165, 114, 0.9);
+  display: flex;
+  justify-content: center;
+}
+body #userLandingPage #main #welcomeScreen {
+  display: flex;
+  width: 80%;
+  justify-content: center;
 }
 body #userLandingPage #footer {
   height: 100px;

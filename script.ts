@@ -23,3 +23,8 @@ let goToLogin = ()=>{
     registrationPage?.classList.add("displayNone");
     loginPage?.classList.remove("displayNone");
 }
+let storage: {username: string, password: string, email:string}[] = [
+    {username:"vignesh", password:"123456",email:"vignesh@gmail.com"}
+];
+localStorage.setItem("persons",JSON.stringify(storage));
+console.log(JSON.stringify(localStorage.getItem("persons")));

@@ -11,28 +11,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="loginPage" class="whiteShadowBackground displayNone">
+    <div id="loginPage" class="whiteShadowBackground">
         <form action="" class="loginform formClass">
             <label for="login-username">User Name</label>
-            <input type="text" id="login-username" placeholder="Enter User Name">
+            <input type="text" id="login-username" placeholder="Enter User Name" class="margin-bottom-20">
             <label for="login-password">Password</label>
             <input type="password" id="login-password" placeholder="Enter Password">
-            <p id="loginErrorMessage" class="warning-message"></p>
+            <p id="loginErrorMessage" class="warning-message">&nbsp;</p>
             <input type="button" value="Login" onclick="loginCheck()">
             <p>Don't have an account? <a href="javascript:void(0)" onclick="goToRegistration()">Register here</a></p>
         </form>
     </div>
-    <div id="registrationPage" class="whiteShadowBackground">
+    <div id="registrationPage" class="whiteShadowBackground displayNone">
         <form class="registrationform formClass">
             <label for="registration-username">User Name</label>
             <input type="text" id="registration-username" placeholder="Enter User Name">
-            <p id="registration-username-alert" class="warning-message"></p>
+            <p id="registration-username-alert" class="warning-message">&nbsp;</p>
             <label for="registration-password">Password</label>
             <input type="password" id="registration-password" placeholder="Enter Password">
-            <p id="registration-password-alert" class="warning-message"></p>
+            <p id="registration-password-alert" class="warning-message">&nbsp;</p>
             <label for="registration-email">Email ID</label>
             <input type="text" id="registration-email" placeholder="Enter Email">
-            <p id="registration-email-alert" class="warning-message"></p>
+            <p id="registration-email-alert" class="warning-message">&nbsp;</p>
             <input type="button" value="Register" onclick="registerUser()">
             <p>Already have an account? <a href="javascript:void(0)" onclick="goToLogin()">Login here</a></p>
         </form>

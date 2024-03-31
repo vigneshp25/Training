@@ -25,16 +25,23 @@ let goToLogin = ()=>{
     registrationPage?.classList.add("displayNone");
     logoutPage?.classList.add("displayNone");
     loginPage?.classList.remove("displayNone");
+    registrationSuccessfulPage?.classList.add("displayNone");
 }
 
 let login = ()=>{
     loginPage?.classList.add("displayNone");
     registrationPage?.classList.add("displayNone");
     userLandingPage?.classList.remove("displayNone");
+    registrationSuccessfulPage?.classList.add("displayNone");
 }
 let logout = ()=>{
     userLandingPage?.classList.add("displayNone");
     logoutPage?.classList.remove("displayNone");
+}
+
+let registrationSuccess = ()=>{
+    registrationPage?.classList.add("displayNone");
+    registrationSuccessfulPage?.classList.remove("displayNone");
 }
 
 let person:{username: string, password: string, email:string} = {username:"vignesh", password:"123456",email:"vignesh@gmail.com"}
@@ -93,7 +100,7 @@ let registerUser = ()=>{
         }
         storage.push(newPerson);
         localStorage.setItem("persons",JSON.stringify(storage));
-        
+        registrationSuccess();
     }
 }
 

@@ -41,7 +41,6 @@ body #loginPage .formClass input, body #registrationPage .formClass input {
   display: block;
   width: 100%;
   height: 40px;
-  margin-bottom: 20px;
   padding: 10px;
   border: 1px solid rgba(215, 165, 114, 0.9);
   background-color: rgba(255, 255, 255, 0.6666666667);
@@ -52,6 +51,13 @@ body #loginPage .formClass input[type=button], body #registrationPage .formClass
 }
 body #loginPage .formClass input[type=button]:hover, body #registrationPage .formClass input[type=button]:hover {
   background-color: rgba(215, 165, 114, 0.9);
+}
+body #loginPage .formClass p.warning-message, body #registrationPage .formClass p.warning-message {
+  font-size: 12px;
+  line-height: 12px;
+  color: red;
+  width: 100%;
+  margin-bottom: 10px;
 }
 body #userLandingPage {
   width: 100%;
@@ -131,6 +137,7 @@ body #userLandingPage #footer {
 body #logoutPage, body #registrationSuccessfulPage {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   background-color: #fff;
@@ -138,6 +145,10 @@ body #logoutPage, body #registrationSuccessfulPage {
 
 .displayNone {
   display: none !important;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
 }
 
 @keyframes rotate {

@@ -38,7 +38,6 @@ body{
                 display: block;
                 width: 100%;
                 height: 40px;
-                margin-bottom: 20px;
                 padding: 10px;
                 border: 1px solid rgba(215,165,114,0.9);
                 background-color: #fffa;
@@ -48,6 +47,15 @@ body{
                     &:hover{
                         background-color: rgba(215,165,114,0.9);
                     }
+                }
+            }
+            p{
+                &.warning-message{
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: red;
+                    width: 100%;
+                    margin-bottom: 10px;
                 }
             }
         }
@@ -130,6 +138,7 @@ body{
     #logoutPage,#registrationSuccessfulPage{
         display: flex;
         width: 100%;
+        flex-wrap: wrap;
         justify-content: center;
         align-content: center;
         background-color: #fff;
@@ -137,6 +146,9 @@ body{
 }
 .displayNone{
     display: none !important;
+}
+.margin-bottom-20{
+    margin-bottom: 20px;
 }
 @keyframes rotate {
     from {

@@ -21,15 +21,21 @@ var goToLogin = function () {
     registrationPage === null || registrationPage === void 0 ? void 0 : registrationPage.classList.add("displayNone");
     logoutPage === null || logoutPage === void 0 ? void 0 : logoutPage.classList.add("displayNone");
     loginPage === null || loginPage === void 0 ? void 0 : loginPage.classList.remove("displayNone");
+    registrationSuccessfulPage === null || registrationSuccessfulPage === void 0 ? void 0 : registrationSuccessfulPage.classList.add("displayNone");
 };
 var login = function () {
     loginPage === null || loginPage === void 0 ? void 0 : loginPage.classList.add("displayNone");
     registrationPage === null || registrationPage === void 0 ? void 0 : registrationPage.classList.add("displayNone");
     userLandingPage === null || userLandingPage === void 0 ? void 0 : userLandingPage.classList.remove("displayNone");
+    registrationSuccessfulPage === null || registrationSuccessfulPage === void 0 ? void 0 : registrationSuccessfulPage.classList.add("displayNone");
 };
 var logout = function () {
     userLandingPage === null || userLandingPage === void 0 ? void 0 : userLandingPage.classList.add("displayNone");
     logoutPage === null || logoutPage === void 0 ? void 0 : logoutPage.classList.remove("displayNone");
+};
+var registrationSuccess = function () {
+    registrationPage === null || registrationPage === void 0 ? void 0 : registrationPage.classList.add("displayNone");
+    registrationSuccessfulPage === null || registrationSuccessfulPage === void 0 ? void 0 : registrationSuccessfulPage.classList.remove("displayNone");
 };
 var person = { username: "vignesh", password: "123456", email: "vignesh@gmail.com" };
 var storage = [];
@@ -83,6 +89,18 @@ var registerUser = function () {
         };
         storage.push(newPerson);
         localStorage.setItem("persons", JSON.stringify(storage));
-        login();
+        registrationSuccess();
     }
+};
+var loginCheck = function () {
+    var username = loginPageUsername.value;
+    var password = loginPagePassword.value;
+    storage.forEach(function (person) {
+        if (username == person.username && password == person.password) {
+            login();
+        }
+        else if (loginPageErrorMessage) {
+            loginPageErrorMessage.textContent = "Incorrect Username or Password";
+        }
+    });
 };

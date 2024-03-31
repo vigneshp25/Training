@@ -3,7 +3,7 @@ const registrationPage = document.getElementById("registrationPage");
 const userLandingPage = document.getElementById("userLandingPage");
 const logoutPage = document.getElementById("logoutPage");
 
-const loginPageUsername = document.getElementById("login-username") as HTMLInputElement;
+const loginPageUsername = document.getElementById("login-username");
 const loginPagePassword = document.getElementById("login-password") as HTMLInputElement;
 const loginPageErrorMessage = document.getElementById("loginErrorMessage");
 

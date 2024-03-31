@@ -56,6 +56,15 @@ var registerUser = function () {
     var email = registrationPageEmail.value;
     var isUserNotExist = checkExistingStorageForValidation(username, password, email);
     if (isUserNotExist) {
+        if (registrationPageUsernameErrorAlert) {
+            registrationPageUsernameErrorAlert.textContent = "";
+        }
+        if (registrationPagePasswordErrorAlert) {
+            registrationPagePasswordErrorAlert.textContent = "";
+        }
+        if (registrationPageEmailErrorAlert) {
+            registrationPageEmailErrorAlert.textContent = "";
+        }
         var newPerson = {
             username: username,
             password: password,

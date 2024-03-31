@@ -2,6 +2,7 @@ var loginPage = document.getElementById("loginPage");
 var registrationPage = document.getElementById("registrationPage");
 var userLandingPage = document.getElementById("userLandingPage");
 var logoutPage = document.getElementById("logoutPage");
+var registrationSuccessfulPage = document.getElementById("registrationSuccessfulPage");
 var loginPageUsername = document.getElementById("login-username");
 var loginPagePassword = document.getElementById("login-password");
 var loginPageErrorMessage = document.getElementById("loginErrorMessage");
@@ -18,7 +19,17 @@ var goToRegistration = function () {
 };
 var goToLogin = function () {
     registrationPage === null || registrationPage === void 0 ? void 0 : registrationPage.classList.add("displayNone");
+    logoutPage === null || logoutPage === void 0 ? void 0 : logoutPage.classList.add("displayNone");
     loginPage === null || loginPage === void 0 ? void 0 : loginPage.classList.remove("displayNone");
+};
+var login = function () {
+    loginPage === null || loginPage === void 0 ? void 0 : loginPage.classList.add("displayNone");
+    registrationPage === null || registrationPage === void 0 ? void 0 : registrationPage.classList.add("displayNone");
+    userLandingPage === null || userLandingPage === void 0 ? void 0 : userLandingPage.classList.remove("displayNone");
+};
+var logout = function () {
+    userLandingPage === null || userLandingPage === void 0 ? void 0 : userLandingPage.classList.add("displayNone");
+    logoutPage === null || logoutPage === void 0 ? void 0 : logoutPage.classList.remove("displayNone");
 };
 var person = { username: "vignesh", password: "123456", email: "vignesh@gmail.com" };
 var storage = [];
@@ -72,6 +83,6 @@ var registerUser = function () {
         };
         storage.push(newPerson);
         localStorage.setItem("persons", JSON.stringify(storage));
-        console.log(localStorage.getItem("persons"));
+        login();
     }
 };

@@ -2,8 +2,10 @@ const loginPage = document.getElementById("loginPage");
 const registrationPage = document.getElementById("registrationPage");
 const userLandingPage = document.getElementById("userLandingPage");
 const logoutPage = document.getElementById("logoutPage");
+const registrationSuccessfulPage = document.getElementById("registrationSuccessfulPage");
 
-const loginPageUsername = document.getElementById("login-username");
+
+const loginPageUsername = document.getElementById("login-username") as HTMLInputElement;
 const loginPagePassword = document.getElementById("login-password") as HTMLInputElement;
 const loginPageErrorMessage = document.getElementById("loginErrorMessage");
 
@@ -21,8 +23,20 @@ let goToRegistration = ()=>{
 }
 let goToLogin = ()=>{
     registrationPage?.classList.add("displayNone");
+    logoutPage?.classList.add("displayNone");
     loginPage?.classList.remove("displayNone");
 }
+
+let login = ()=>{
+    loginPage?.classList.add("displayNone");
+    registrationPage?.classList.add("displayNone");
+    userLandingPage?.classList.remove("displayNone");
+}
+let logout = ()=>{
+    userLandingPage?.classList.add("displayNone");
+    logoutPage?.classList.remove("displayNone");
+}
+
 let person:{username: string, password: string, email:string} = {username:"vignesh", password:"123456",email:"vignesh@gmail.com"}
 let storage: {username: string, password: string, email:string}[] = [];
 storage.push(person);
@@ -79,6 +93,18 @@ let registerUser = ()=>{
         }
         storage.push(newPerson);
         localStorage.setItem("persons",JSON.stringify(storage));
-        console.log(localStorage.getItem("persons"));
+        
     }
+}
+
+let loginCheck = ()=>{
+    let username = loginPageUsername.value;
+    let password = loginPagePassword.value;
+    storage.forEach(person => {
+        if(username == person.username && password == person.password){
+            login();
+        }else if(loginPageErrorMessage){
+            loginPageErrorMessage.textContent="Incorrect Username or Password";
+        }
+    });
 }

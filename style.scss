@@ -127,6 +127,13 @@ body{
             background-color: #fff;
         }
     }
+    #logoutPage,#registrationSuccessfulPage{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        background-color: #fff;
+    }
 }
 .displayNone{
     display: none !important;

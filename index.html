@@ -18,7 +18,7 @@
             <label for="login-password">Password</label>
             <input type="password" id="login-password" placeholder="Enter Password">
             <p id="loginErrorMessage" class="warning-message"></p>
-            <input type="button" value="Login">
+            <input type="button" value="Login" onclick="loginCheck()">
             <p>Don't have an account? <a href="javascript:void(0)" onclick="goToRegistration()">Register here</a></p>
         </form>
     </div>
@@ -50,7 +50,7 @@
                     <li><a href="#">Thirukural</a></li>
                 </ul>
             </nav>
-            <button id="logoutButton">Logout</button>
+            <button id="logoutButton" onclick="logout()">Logout</button>
         </header>
         <main id="main">
             <section id="welcomeScreen">
@@ -65,7 +65,12 @@
     </div>
     <div id="logoutPage" class="displayNone">
         <section id="logoutSection">
-            <h3 id="logoutMessage">You have been sucessfully logged out</h3>
+            <h3 id="logoutMessage">You have been sucessfully logged out. <a href="javascript:void(0)" onclick="goToLogin()">Click Here</a> to login again.</h3>
+        </section>
+    </div>
+    <div id="registrationSuccessfulPage" class="displayNone">
+        <section id="registrationSuccessfulSection">
+            <h3 id="registrationSuccessfulMessage">Registration Success!. <a href="javascript:void(0)" onclick="goToLogin()">Click Here</a> to login.</h3>
         </section>
     </div>
     <script src="script.js"></script>

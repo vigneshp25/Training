@@ -128,6 +128,13 @@ body #userLandingPage #footer {
   justify-content: space-around;
   background-color: #fff;
 }
+body #logoutPage, body #registrationSuccessfulPage {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  background-color: #fff;
+}
 
 .displayNone {
   display: none !important;

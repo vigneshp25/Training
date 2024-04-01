@@ -2,10 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=h1, initial-scale=1.0">
-    <title>Test with git desktop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vignesh App</title>
+    <link rel="stylesheet" href="https://unpkg.com/scss-reset/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Vignesh</h1>
+    <div id="loginPage" class="whiteShadowBackground">
+        <form action="" class="loginform formClass">
+            <label for="login-username">User Name</label>
+            <input type="text" id="login-username" placeholder="Enter User Name" class="margin-bottom-20">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="Enter Password">
+            <p id="loginErrorMessage" class="warning-message">&nbsp;</p>
+            <input type="button" value="Login" onclick="loginCheck()">
+            <p>Don't have an account? <a href="javascript:void(0)" onclick="goToRegistration()">Register here</a></p>
+        </form>
+    </div>
+    <div id="registrationPage" class="whiteShadowBackground displayNone">
+        <form class="registrationform formClass">
+            <label for="registration-username">User Name</label>
+            <input type="text" id="registration-username" placeholder="Enter User Name">
+            <p id="registration-username-alert" class="warning-message">&nbsp;</p>
+            <label for="registration-password">Password</label>
+            <input type="password" id="registration-password" placeholder="Enter Password">
+            <p id="registration-password-alert" class="warning-message">&nbsp;</p>
+            <label for="registration-email">Email ID</label>
+            <input type="text" id="registration-email" placeholder="Enter Email">
+            <p id="registration-email-alert" class="warning-message">&nbsp;</p>
+            <input type="button" value="Register" onclick="registerUser()">
+            <p>Already have an account? <a href="javascript:void(0)" onclick="goToLogin()">Login here</a></p>
+        </form>
+    </div>
+    <div id="userLandingPage" class="displayNone">
+        <header id="header">
+            <div id="logo">
+                <img src="assets/logo.png" alt="logo">
+            </div>
+            <nav id="navigation">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Joke</a></li>
+                    <li><a href="#">Thirukural</a></li>
+                </ul>
+            </nav>
+            <button id="logoutButton" onclick="logout()">Logout</button>
+        </header>
+        <main id="main">
+            <section id="welcomeScreen">
+                <h3 id="welcomeMessage">
+                    Welcome Vignesh
+                </h3>
+            </section>
+        </main>
+        <footer id="footer">
+            <p class="footerMessage">Copyright © 2024 All Rights Reserved</p>
+        </footer>
+    </div>
+    <div id="logoutPage" class="displayNone">
+        <section id="logoutSection">
+            <h3 id="logoutMessage">You have been sucessfully logged out. <a href="javascript:void(0)" onclick="goToLogin()">Click Here</a> to login again.</h3>
+        </section>
+    </div>
+    <div id="registrationSuccessfulPage" class="displayNone">
+        <section id="registrationSuccessfulSection">
+            <h3 id="registrationSuccessfulMessage">Registration Success!. <a href="javascript:void(0)" onclick="goToLogin()">Click Here</a> to login.</h3>
+        </section>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -108,12 +108,30 @@ var loginCheck = function () {
         }
     });
 };
-var loadProductsPage = function () {
-    welcomeScreenPage === null || welcomeScreenPage === void 0 ? void 0 : welcomeScreenPage.classList.add("displayNone");
-    productsPage === null || productsPage === void 0 ? void 0 : productsPage.classList.remove("displayNone");
-};
 var productsPageContent = function () {
     fetch('https://dummyjson.com/users')
         .then(function (result) { return result.json(); })
-        .then(console.log);
+        .then(function (data) {
+        var userDetails = data.users; //assign original object array to variable
+        buildTable(userDetails);
+    });
+};
+var buildTable = function (data) {
+    var table = document.createElement('table');
+    var tableHeader = document.createElement('thead');
+    table.classList.add("table-styles");
+    var tableHeaderRow = document.createElement('tr');
+    for (var key in data[0]) {
+        var th = document.createElement('th');
+        th.textContent = key.toUpperCase();
+        tableHeaderRow.appendChild(th);
+    }
+    tableHeader.appendChild(tableHeaderRow);
+    table.appendChild(tableHeader);
+    productsPage === null || productsPage === void 0 ? void 0 : productsPage.appendChild(table);
+};
+var loadProductsPage = function () {
+    welcomeScreenPage === null || welcomeScreenPage === void 0 ? void 0 : welcomeScreenPage.classList.add("displayNone");
+    productsPage === null || productsPage === void 0 ? void 0 : productsPage.classList.remove("displayNone");
+    productsPageContent();
 };

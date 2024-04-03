@@ -122,11 +122,6 @@ let loginCheck = ()=>{
     });
 }
 
-let loadProductsPage = ()=>{
-    welcomeScreenPage?.classList.add("displayNone");
-    productsPage?.classList.remove("displayNone");
-}
-
 let productsPageContent = ()=>{
     fetch('https://dummyjson.com/users')
     .then(result => result.json())
@@ -137,6 +132,22 @@ let productsPageContent = ()=>{
 }
 
 let buildTable = (data: object[])=>{
-    for(let person of data){
+    const table = document.createElement('table');
+    const tableHeader = document.createElement('thead');
+    table.classList.add("table-styles");
+    const tableHeaderRow = document.createElement('tr');
+    for(let key in data[0]){
+        const th = document.createElement('th');
+        th.textContent = key.toUpperCase();
+        tableHeaderRow.appendChild(th);
     }
+    tableHeader.appendChild(tableHeaderRow);
+    table.appendChild(tableHeader);
+    productsPage?.appendChild(table);
+}
+
+let loadProductsPage = ()=>{
+    welcomeScreenPage?.classList.add("displayNone");
+    productsPage?.classList.remove("displayNone");
+    productsPageContent();
 }

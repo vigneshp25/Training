@@ -42,7 +42,7 @@ body{
                 border: 1px solid rgba(215,165,114,0.9);
                 background-color: #fffa;
                 &[type="button"]{
-                    margin-top: 20px;
+                    margin: 20px 0;
                     text-transform: uppercase;
                     &:hover{
                         background-color: rgba(215,165,114,0.9);
@@ -97,6 +97,13 @@ body{
                             text-decoration: none;
                             color: #03A753;
                         }
+                        &.active{
+                            border: 1px solid #FAAF29;
+                            background-color: #03A753;
+                            a{
+                                color: #fff;
+                            }
+                        }
                         &:hover{
                             border: 1px solid #FAAF29;
                         }
@@ -118,13 +125,20 @@ body{
         }
         #main{
             min-height: calc(100vh - 200px);
-            background-color: rgba(215,165,114,0.9);
+            background-color: rgba(253, 201, 20, 0.7);
             display: flex;
             justify-content: center;
-            #welcomeScreen{
+            .mainSections{
                 display: flex;
                 width: 80%;
                 justify-content: center;
+            }
+            #welcomeScreenPage{
+                align-self: center;
+                h3{
+                    font-size: 60px;
+                    color: #fff;
+                }
             }
         }
         #footer{

@@ -15,7 +15,13 @@ const registrationPageEmail = document.getElementById("registration-email") as H
 const registrationPageUsernameErrorAlert = document.getElementById("registration-username-alert");
 const registrationPagePasswordErrorAlert = document.getElementById("registration-password-alert");
 const registrationPageEmailErrorAlert = document.getElementById("registration-email-alert");
-const user:string = "vignesh";
+
+const welcomeScreenPage = document.getElementById("welcomeScreenPage");
+const productsPage = document.getElementById("productsPage");
+const JokesPage = document.getElementById("JokesPage");
+const ThirukuralsPage = document.getElementById("ThirukuralsPage");
+
+const navigation = document.getElementById("navigation");
 
 let goToRegistration = ()=>{
     loginPage?.classList.add("displayNone");
@@ -114,4 +120,23 @@ let loginCheck = ()=>{
             loginPageErrorMessage.textContent="Incorrect Username or Password";
         }
     });
+}
+
+let loadProductsPage = ()=>{
+    welcomeScreenPage?.classList.add("displayNone");
+    productsPage?.classList.remove("displayNone");
+}
+
+let productsPageContent = ()=>{
+    fetch('https://dummyjson.com/users')
+    .then(result => result.json())
+    .then(data => {
+        let userDetails = data.users; //assign original object array to variable
+        buildTable(userDetails);
+    })
+}
+
+let buildTable = (data: object[])=>{
+    for(let person of data){
+    }
 }

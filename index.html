@@ -44,20 +44,23 @@
             </div>
             <nav id="navigation">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Joke</a></li>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li onclick="loadProductsPage()"><a href="#">Products</a></li>
+                    <li><a href="#">Joke's</a></li>
                     <li><a href="#">Thirukural</a></li>
                 </ul>
             </nav>
             <button id="logoutButton" onclick="logout()">Logout</button>
         </header>
         <main id="main">
-            <section id="welcomeScreen">
+            <section id="welcomeScreenPage" class="mainSections">
                 <h3 id="welcomeMessage">
                     Welcome Vignesh
                 </h3>
             </section>
+            <section id="productsPage" class="mainSections displayNone"></section>
+            <section id="JokesPage" class="mainSections displayNone"></section>
+            <section id="ThirukuralsPage" class="mainSections displayNone"></section>
         </main>
         <footer id="footer">
             <p class="footerMessage">Copyright © 2024 All Rights Reserved</p>

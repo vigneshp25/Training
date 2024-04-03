@@ -12,7 +12,11 @@ var registrationPageEmail = document.getElementById("registration-email");
 var registrationPageUsernameErrorAlert = document.getElementById("registration-username-alert");
 var registrationPagePasswordErrorAlert = document.getElementById("registration-password-alert");
 var registrationPageEmailErrorAlert = document.getElementById("registration-email-alert");
-var user = "vignesh";
+var welcomeScreenPage = document.getElementById("welcomeScreenPage");
+var productsPage = document.getElementById("productsPage");
+var JokesPage = document.getElementById("JokesPage");
+var ThirukuralsPage = document.getElementById("ThirukuralsPage");
+var navigation = document.getElementById("navigation");
 var goToRegistration = function () {
     loginPage === null || loginPage === void 0 ? void 0 : loginPage.classList.add("displayNone");
     registrationPage === null || registrationPage === void 0 ? void 0 : registrationPage.classList.remove("displayNone");
@@ -103,4 +107,13 @@ var loginCheck = function () {
             loginPageErrorMessage.textContent = "Incorrect Username or Password";
         }
     });
+};
+var loadProductsPage = function () {
+    welcomeScreenPage === null || welcomeScreenPage === void 0 ? void 0 : welcomeScreenPage.classList.add("displayNone");
+    productsPage === null || productsPage === void 0 ? void 0 : productsPage.classList.remove("displayNone");
+};
+var productsPageContent = function () {
+    fetch('https://dummyjson.com/users')
+        .then(function (result) { return result.json(); })
+        .then(console.log);
 };

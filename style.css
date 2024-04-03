@@ -46,7 +46,7 @@ body #loginPage .formClass input, body #registrationPage .formClass input {
   background-color: rgba(255, 255, 255, 0.6666666667);
 }
 body #loginPage .formClass input[type=button], body #registrationPage .formClass input[type=button] {
-  margin-top: 20px;
+  margin: 20px 0;
   text-transform: uppercase;
 }
 body #loginPage .formClass input[type=button]:hover, body #registrationPage .formClass input[type=button]:hover {
@@ -101,6 +101,13 @@ body #userLandingPage #header #navigation ul li a {
   text-decoration: none;
   color: #03A753;
 }
+body #userLandingPage #header #navigation ul li.active {
+  border: 1px solid #FAAF29;
+  background-color: #03A753;
+}
+body #userLandingPage #header #navigation ul li.active a {
+  color: #fff;
+}
 body #userLandingPage #header #navigation ul li:hover {
   border: 1px solid #FAAF29;
 }
@@ -118,14 +125,21 @@ body #userLandingPage #header #logoutButton:hover {
 }
 body #userLandingPage #main {
   min-height: calc(100vh - 200px);
-  background-color: rgba(215, 165, 114, 0.9);
+  background-color: rgba(253, 201, 20, 0.7);
   display: flex;
   justify-content: center;
 }
-body #userLandingPage #main #welcomeScreen {
+body #userLandingPage #main .mainSections {
   display: flex;
   width: 80%;
   justify-content: center;
+}
+body #userLandingPage #main #welcomeScreenPage {
+  align-self: center;
+}
+body #userLandingPage #main #welcomeScreenPage h3 {
+  font-size: 60px;
+  color: #fff;
 }
 body #userLandingPage #footer {
   height: 100px;
